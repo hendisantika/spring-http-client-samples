@@ -41,4 +41,9 @@ public class WebClientController {
                 .bodyToMono(Echo.class)
                 .block();
     }
+
+    @GetMapping("/interface/echo/{message}")
+    public Echo echoInterface(@PathVariable String message) {
+        return echoService.echo(message);
+    }
 }
