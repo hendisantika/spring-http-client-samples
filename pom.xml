@@ -1,0 +1,16 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>id.my.hendisantika</groupId>
+    <artifactId>reactive-caller</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <modules>
+        <module>blocking-caller</module>
+        <module>echo-service</module>
+        <module>reactive-caller</module>
+    </modules>
+
+</project>
