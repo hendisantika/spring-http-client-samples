@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: maven
+    directory: "/blocking-caller"
+    schedule:
+      interval: daily
+      time: '05:00'
+      timezone: Asia/Jakarta
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: maven
+    directory: "/echo-service"
+    schedule:
+      interval: daily
+      time: '05:00'
+      timezone: Asia/Jakarta
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: maven
+    directory: "/reactive-caller"
+    schedule:
+      interval: daily
+      time: '05:00'
+      timezone: Asia/Jakarta
+    open-pull-requests-limit: 10
+    
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
