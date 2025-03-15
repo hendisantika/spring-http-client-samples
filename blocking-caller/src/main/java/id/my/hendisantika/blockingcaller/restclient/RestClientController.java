@@ -41,4 +41,8 @@ public class RestClientController {
                 .body(Echo.class);
     }
 
+    @GetMapping("/interface/echo/{message}")
+    public Echo echoInterface(@PathVariable String message) {
+        return echoService.echo(message);
+    }
 }
