@@ -1,7 +1,10 @@
 package id.my.hendisantika.blockingcaller.restclient;
 
+import id.my.hendisantika.blockingcaller.Echo;
 import id.my.hendisantika.blockingcaller.EchoService;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClient;
@@ -28,4 +31,14 @@ public class RestClientController {
         this.restClient = restClient;
         this.echoService = echoService;
     }
+
+    @GetMapping("/echo/{message}")
+    public Echo echo(@PathVariable String message) {
+        return restClient
+                .get()
+                .uri("/echo/" + message)
+                .retrieve()
+                .body(Echo.class);
+    }
+
 }
