@@ -36,4 +36,9 @@ public class RestTemplateController {
     public Echo echo(@PathVariable String message) {
         return restTemplate.getForObject("http://localhost:8080/echo/" + message, Echo.class);
     }
+
+    @GetMapping("/interface/echo/{message}")
+    public Echo echoInterface(@PathVariable String message) {
+        return echoService.echo(message);
+    }
 }
